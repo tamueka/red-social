@@ -53,7 +53,7 @@ export default class Login extends Component {
   }
 
   handleLogout = () => {
-    console.log('se elimino usuario log')
+    console.log('Fin de la sesion')
     store.remove('loggedIn')
     this.setState({ isAuthenticated: false });
     this.setState({ redirectToReferrer: false });
@@ -63,11 +63,11 @@ export default class Login extends Component {
     const { error } = this.state;
     return (
       <div className="Login">
-        <h1>Login</h1>
+        <h1>Inicia Sesion:</h1>
         <form error={error.toString()} onSubmit={this.handleSubmit}>
           {error && < Message
             error={error.toString()}
-            content="That username/password is incorrect. Try again!"
+            content = "Ese nombre de usuario/contraseña es incorrecto. Inténtalo de nuevo!"
           />}
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
@@ -92,7 +92,7 @@ export default class Login extends Component {
             bsSize="large"
             disabled={!this.validateForm()}
             type="submit">
-            Login
+            Inicia
           </Button>
         </form>
       </div>

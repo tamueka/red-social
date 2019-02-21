@@ -34,22 +34,22 @@ export default class AppRoutes extends Component {
           <Navbar.Collapse>
             <Nav pullRight>
               <NavItem eventKey={1} href="/Login">
-                Login
+                LogIn
               </NavItem>
               <NavItem eventKey={2} href="/Message">
-                Message
+                Mensaje
               </NavItem>
               <NavItem eventKey={3} href="/Request">
-                Request
+                Solicitud
               </NavItem>
               <NavItem eventKey={4} href="/Friends">
-                Friends
+                Amigos
               </NavItem>    
               <NavItem eventKey={5} href="/MyProfile">
-                Profile
+                Perfil
               </NavItem> 
               <NavItem eventKey={5} onClick={() => Loginstance.handleLogout()} href="/Login">
-                Logout
+                LogOut
               </NavItem>
             </Nav>
           </Navbar.Collapse>

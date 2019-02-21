@@ -1,7 +1,6 @@
 import React, { Component}  from 'react';
 import {Link} from 'react-router-dom';
 import store from 'store';
-import { Col } from 'reactstrap';
 import './Home.css';
 
 
@@ -62,9 +61,9 @@ class Home extends Component {
         return(
             this.state.pictures &&
             this.state.pictures.map( pic => 
-                <Col key={pic.email} xs={4} md={3} xl={2}>
+                <div key={pic.email}>
                     <div class="name">{pic.name}</div>
-                    <img src={pic.pic}  alt="Card" />
+                    <div><img src={pic.pic}  alt="Card" /></div>
                     <div class="mail">{pic.email}</div>
                     {this.state.following_list.length> 0  && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email &  foll.state === 'accepted'  )  ? 
                     <Link to={'/Profile/' + pic.email }>Profile</Link>:null        
@@ -75,11 +74,9 @@ class Home extends Component {
                             {this.state.following_list.length > 0   && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email  )  ? 
                                 null : <button class="button" onClick={() => this.follow(pic.email)}>Follow</button>               
                             } 
-                </Col>
- 
+                </div>
             )  
         )
     }
 }
-
 export default Home;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col} from 'reactstrap';
-import {  Button, FormGroup, ControlLabel,  FormControl} from 'react-bootstrap';
+import { Button, FormGroup, ControlLabel,  FormControl } from 'react-bootstrap';
 import store from 'store';
 import './message.css'
 
@@ -63,7 +63,7 @@ export default class Message extends Component  {
       <div className="Row">
         <Col className="cont" xs="4" sm="4" md="4"></Col>
         <Col className="cont" xs="4" sm="4" md="4">
-          <h1 className="h1"> Write a message..</h1>
+          <h1 className="h1">Escribe un mensaje..</h1>
           <form  onSubmit={this.handleSubmit}>
             <FormGroup controlId="email" bsSize="large">
               <ControlLabel>Email</ControlLabel>
@@ -75,7 +75,7 @@ export default class Message extends Component  {
                 />
             </FormGroup>
             <FormGroup controlId="message">
-              <ControlLabel>Message</ControlLabel>
+              <ControlLabel>Mensaje</ControlLabel>
               <FormControl componentClass="textarea" placeholder="message" onChange={this.handleChange} />
             </FormGroup>
             <Button
@@ -83,7 +83,7 @@ export default class Message extends Component  {
             bsStyle="info"
             bsSize="large"
             type="submit">
-              Post
+              Enviar
             </Button>
           </form>
           <Col xs="3" sm="3" md="3"></Col>
