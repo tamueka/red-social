@@ -1,0 +1,32 @@
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+}
+  
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.error {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
