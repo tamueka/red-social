@@ -63,14 +63,14 @@ export default class Login extends Component {
     const { error } = this.state;
     return (
       <div className="Login">
-        <h1>Inicia Sesion:</h1>
+        <h1>Iniciar Sesion:</h1>
         <form error={error.toString()} onSubmit={this.handleSubmit}>
           {error && < Message
             error={error.toString()}
             content = "Ese nombre de usuario/contraseña es incorrecto. Inténtalo de nuevo!"
           />}
           <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
+            <ControlLabel>Correo Electronico</ControlLabel>
             <FormControl
               autoFocus
               type="email"
@@ -79,7 +79,7 @@ export default class Login extends Component {
             />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
+            <ControlLabel>Contraseña</ControlLabel>
             <FormControl
               value={this.state.password}
               onChange={this.handleChange}

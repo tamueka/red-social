@@ -1,4 +1,4 @@
-.h1 {
+.h1{
     font-size: 40px;
     font-weight: bold;
     text-align: center;
@@ -6,51 +6,32 @@
     color: #26a69a;
     text-align: start !important;
 }
-.cont{
-    height: 600px;
-    padding-top: 50px;
+.chat-message{
+    color: black;
 }
 
-.card {
-    position: relative;
-    display: -ms-flexbox;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
-
-.card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125);
-}
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-}
-.card-title {
-    margin-bottom: .75rem;
-}
-
-.card-text {
-    text-align: justify;
-}
-.card-footer {
-    padding: .75rem 1.25rem;
-    background-color: rgba(0,0,0,.03);
-    border-top: 1px solid rgba(0,0,0,.125);
-}
 
 section#timeline {
-    width: 80%;
-    margin: 20px auto;
-    position: relative;
     padding-top: 0px !important;
+    text-align: center;
+}
+
+.inner {
+    width: 103% !important;
+    border-radius: 6px;
+}
+
+
+.col-md-5 {
+      width: 47.666667% !important;
+}
+
+section#timeline article div.inner h2 {
+    color:#26a69a !important;
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: -1px;
+    border-radius: 6px 6px 0 0;
+    position: relative;
 }

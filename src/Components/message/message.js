@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Col} from 'reactstrap';
-import { Button, FormGroup, ControlLabel,  FormControl } from 'react-bootstrap';
+import {Col} from 'reactstrap';
+import {Button, FormGroup, ControlLabel,  FormControl } from 'react-bootstrap';
 import store from 'store';
 import './message.css'
 
@@ -61,12 +61,11 @@ export default class Message extends Component  {
   render() {
     return (
       <div className="Row">
-        <Col className="cont" xs="4" sm="4" md="4"></Col>
-        <Col className="cont" xs="4" sm="4" md="4">
-          <h1 className="h1">Escribe un mensaje..</h1>
+        <Col xs="5" sm="5" md="5">
+          <h1>Escribe un mensaje..</h1>
           <form  onSubmit={this.handleSubmit}>
             <FormGroup controlId="email" bsSize="large">
-              <ControlLabel>Email</ControlLabel>
+              <ControlLabel>Correo Electronico</ControlLabel>
                 <FormControl
                   autoFocus
                   type="email"
@@ -76,7 +75,7 @@ export default class Message extends Component  {
             </FormGroup>
             <FormGroup controlId="message">
               <ControlLabel>Mensaje</ControlLabel>
-              <FormControl componentClass="textarea" placeholder="message" onChange={this.handleChange} />
+              <FormControl componentClass="textarea" placeholder="Escribe aqui..." onChange={this.handleChange} />
             </FormGroup>
             <Button
             block
@@ -86,22 +85,16 @@ export default class Message extends Component  {
               Enviar
             </Button>
           </form>
-          <Col xs="3" sm="3" md="3"></Col>
         </Col>
-        <Col className="cont" xs="4" sm="4" md="4"></Col>
-          <h2>Timeline</h2>
-        <Col className="Row">
+        
+        <Col xs="5" sm="5" md="5">
+        <h1>Chat</h1>
           <section id="timeline">
             {this.state.myData && this.state.res  && 
               this.state.res.map( mess => 
                 <article key={mess.message}>
                   <div className="inner">
-                    <span className="date">
-                      <span className="day">{ new Date(mess.date).getDate()}<sup>th</sup></span>
-                      <span className="month">{new Date(mess.date).getMonth()}</span>
-                      <span className="year">{new Date(mess.date).getFullYear()}</span>
-                    </span>
-                    <h2>{mess.email}</h2> 
+                    <h2 class="chat-message">{mess.email}</h2> 
                     <p>{mess.message}</p>
                   </div>
                 </article>
@@ -112,5 +105,5 @@ export default class Message extends Component  {
    )
   }
 }
-      
+    
   

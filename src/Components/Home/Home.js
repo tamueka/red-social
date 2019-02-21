@@ -66,7 +66,7 @@ class Home extends Component {
                     <div><img src={pic.pic}  alt="Card" /></div>
                     <div class="mail">{pic.email}</div>
                     {this.state.following_list.length> 0  && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email &  foll.state === 'accepted'  )  ? 
-                    <Link to={'/Profile/' + pic.email }>Profile</Link>:null        
+                    <Link to={'/Profile/' + pic.email }>Ver Perfil</Link>:null        
                             } 
                             {this.state.following_list.length > 0  && this.state.following_list.find(foll =>  foll.followed === pic.email & foll.user === store.get('User').email & foll.state === 'sent' )  ? 
                                 <p className="status">Sent Requests</p> :null        
