@@ -1,7 +1,6 @@
-## Proceso de instalación 
 
-- ## Instalación
-Ejecuta el siguiente comando para instalar todas las dependencias que necesita RED SOCIAL REACT
+## Instalación
+Instalar todas las dependencias RED SOCIAL REACT
 
 ```shell
 npm install
@@ -9,19 +8,27 @@ npm install
 
 - ## Ejecución
 
-Para ejecutar la aplicación en producción usa:
+Ejecutar la aplicación:
 
 ```shell
 npm start
 ```
+
+- ## Producción:
+
+Ejecutar la aplicación en produccion:
+
+```shell
+npm run build
+```
+
 - ## Usuarios
 
-Para ingresar en la aplicación necesitas de usuarios, a continuación te dejo dos usuarios para que puedas ingresar y realizar pruebas
+Inicicar sesion con los siguientes datos de usuario para propab app:
 
 Email:don.white@example.com contraseña:0101
 
-la BD se encuentra en la carpeta Data/user.json. 
-Los datos de estos usuarios se obtuvieron de la pagina <https://randomuser.me/>
+<https://randomuser.me/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
