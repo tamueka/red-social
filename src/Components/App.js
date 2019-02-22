@@ -7,26 +7,26 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-                <Navbar inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a className="App-title" href="/">React Social</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-            </Nav>
-            <Nav pullRight>
-              <NavItem eventKey={1} href="#">
-                Login
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Logout
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>;
+          <Navbar inverse collapseOnSelect>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a className="App-title" href="/">React Social</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav>
+              </Nav>
+              <Nav pullRight>
+                <NavItem eventKey={1} href="#">
+                  Login
+                </NavItem>
+                <NavItem eventKey={2} href="#">
+                  Logout
+                </NavItem>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>;
         </header>     
       </div>
      

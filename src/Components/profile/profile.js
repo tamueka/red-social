@@ -14,6 +14,7 @@ export default class Profile extends React.Component {
      locations: '',
      picture: '',
      email: '',
+     phone:'',
      following: [],
      myData: [],
      res: [],
@@ -45,7 +46,7 @@ export default class Profile extends React.Component {
         return this.setState({ error: true });
       }
     const name = data.name.title + ' ' + data.name.first + ' ' + data.name.last
-    this.setState({ user: name, email: data.email, location: data.location.street, picture: data.picture.large  });
+    this.setState({ user: name, email: data.email, location: data.location.street, picture: data.picture.large, phone: data.phone  });
     })
   }
 
@@ -61,10 +62,11 @@ export default class Profile extends React.Component {
                 </div>
                 <div className="col-8 col-7-large col-12-medium text-center">
                   <header>
-                    <h1><strong>{ this.state.user }</strong>.</h1>
+                    <h1><strong>{ this.state.user }</strong></h1>
                   </header>
                   <p>{this.state.email}</p>
-                  <p>{ this.state.location}</p> 
+                  <p>{this.state.location}</p> 
+                  <p>{this.state.phone}</p> 
                 </div>
               </div>
             </div>
@@ -79,17 +81,12 @@ export default class Profile extends React.Component {
               this.state.following.find(foll => foll.followed === mess.email & foll.user === store.get('User').email  )  ? 
               <article key={mess.message}>
                 <div className="inner">
-                  <span className="date">
-                    <span className="day">{ new Date(mess.date).getDate()}<sup>th</sup></span>
-                    <span className="month">{new Date(mess.date).getMonth()}</span>
-                    <span className="year">{new Date(mess.date).getFullYear()}</span>
-                  </span>
                   <h2>{mess.email}</h2> 
                   <p> {mess.message}</p>
                 </div>
-              </article> : <Col className="textr" xs="12" sm="12" md="12">user not followed</Col> 
+              </article> : <Col className="textr" xs="12" sm="12" md="12">No sigues usuarios</Col> 
             )}
-            </section>:<h1>no tienes mensajes</h1> }  
+            </section>:<h1>No tienes mensajes</h1> }  
         </Col>
       </div>
     );

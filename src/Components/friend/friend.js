@@ -72,11 +72,11 @@ class friend extends Component {
                                 <CardImg width="100%" src={pic.pic}  alt="Card image cap" />
                             <CardBody>
                             <CardText>{pic.email}</CardText>
-                            {this.state.following_list.length > 0  && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email & foll.state === 'accepted'  )  ? 
-                                <Link to={'/Profile/' + pic.email } >  Profile  </Link> :null        
+                            {this.state.following_list.length> 0  && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email & foll.state === 'accepted'  )  ? 
+                                <Link to={'/Profile/' + pic.email }>Perfil</Link> :null        
                             } 
                             {this.state.following_list.length > 0  && this.state.following_list.find(foll => foll.followed === pic.email & foll.user === store.get('User').email & foll.state === 'sent'  )  ? 
-                                 <p className="status">  Sent Requests  </p> :null                
+                                 <p className="status">Peticion Enviada</p> :null                
                             } 
                         </CardBody>
                     </Card>       

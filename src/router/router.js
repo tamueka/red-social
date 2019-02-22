@@ -26,8 +26,8 @@ export default class AppRoutes extends Component {
         <header className="App-header">
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
-            <Navbar.Brand>
-              <NavLink className="App-title" exact to="/">React Social</NavLink>
+            <Navbar.Brand exact to="/" right>
+            <NavLink className="App-title" exact to="/">React Social</NavLink>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -48,7 +48,7 @@ export default class AppRoutes extends Component {
               <NavItem eventKey={5} href="/MyProfile">
                 Perfil
               </NavItem> 
-              <NavItem eventKey={5} onClick={() => Loginstance.handleLogout()} href="/Login">
+              <NavItem eventKey={6} onClick={() => Loginstance.handleLogout()} href="/Login">
                 LogOut
               </NavItem>
             </Nav>

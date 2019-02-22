@@ -1,10 +1,15 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
   }
 body {
   background: #fff;
+}
+
+.photo{
+  align-content: center;
+  align-items: center;
 }
 section#timeline {
   width: 80%;
@@ -88,15 +93,14 @@ section#timeline article div.inner h2:after {
   right: -5px;
   width: 10px; 
   height: 10px;
-  -webkit-transform: rotate(-45deg);
 }
 
 section#timeline article div.inner p {
   padding: 15px;
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   background: #fff;
-  color: #656565;
+  color: black;
   border-radius: 0 0 6px 6px;
 }
 section#timeline article:nth-child(2n+2) div.inner {
@@ -105,73 +109,8 @@ section#timeline article:nth-child(2n+2) div.inner {
 section#timeline article:nth-child(2n+2) div.inner h2:after {
   left: -5px;
 }
-section#timeline article:nth-child(1) div.inner h2 {
-  background: #e74c3c;
-}
-section#timeline article:nth-child(1) div.inner h2:after {
-  background: #e74c3c;
-}
-section#timeline article:nth-child(2) div.inner h2 {
-  background: #2ecc71;
-}
-section#timeline article:nth-child(2) div.inner h2:after {
-  background: #2ecc71;
-}
-section#timeline article:nth-child(3) div.inner h2 {
-  background: #e67e22;
-}
-section#timeline article:nth-child(3) div.inner h2:after {
-   background: #e67e22;
-}
-section#timeline article:nth-child(4) div.inner h2 {
-  background: #1abc9c;
-}
-section#timeline article:nth-child(4) div.inner h2:after {
-  background: #1abc9c;
-}
-section#timeline article:nth-child(5) div.inner h2 {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(6) div.inner h2:after {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(6) div.inner h2 {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(7) div.inner h2:after {
-  background: #e67e22;
-}
-section#timeline article:nth-child(7) div.inner h2 {
-  background: #e67e22;
-}
-section#timeline article:nth-child(8) div.inner h2:after {
-  background:  #e74c3c;
-}
-section#timeline article:nth-child(8) div.inner h2 {
-  background: #e74c3c;
-}
-section#timeline article:nth-child(9) div.inner h2:after {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(9) div.inner h2 {
-  background: #9b59b6;
-}
-section#timeline article:nth-child(10) div.inner h2:after {
-  background:  #e74c3c;
-}
-section#timeline article:nth-child(10) div.inner h2 {
-  background:  #e74c3c;
-} 
-section#timeline article:nth-child(11) div.inner h2:after {
-  background: #1abc9c;
-}
-section#timeline article:nth-child(11) div.inner h2 {
-  background:#1abc9c;
-}
-  
 #top {
   padding: 10em 0 10em 0;
-  text-align: left;
 }
 
 #top .image {

@@ -10,7 +10,8 @@ export default class Profile extends React.Component {
       name: store.get('User').name.title + ' ' + store.get('User').name.first + ' ' + store.get('User').name.last,
       email: store.get('User').email ,
       location:  store.get('User').location.street,
-      photo:  store.get('User').picture.large,
+      phone: store.get('User').phone,
+      photo:  store.get('User').picture.medium,
       myData: [],
       res: []
     }
@@ -36,15 +37,16 @@ export default class Profile extends React.Component {
           <article id="top" className="wrapper style1">
             <div className="container">
               <div className="row">
-                <div className="col-4 col-5-large col-12-medium">
-                  <span className="image fit"><img src={ this.state.photo } alt="" /></span>
+                <div className="col-12">
+                  <span class="photo"><img src={ this.state.photo } alt="" /></span>
                 </div>
                 <div className="col-8 col-7-large col-12-medium text-center">
                   <header>
-                    <h1><strong>{ this.state.name }</strong>.</h1>
+                    <h1><strong>{ this.state.name }</strong></h1>
                   </header>
                   <p>{this.state.email}</p>
                   <p>{this.state.location}</p>
+                  <p>Phone: {this.state.phone}</p>
                 </div>
               </div>
             </div>
@@ -53,15 +55,11 @@ export default class Profile extends React.Component {
         <Col xs="4" sm="4" md="4"></Col>
         <Col className="Row">
           <section id="timeline">
+          <h1>Mensajes</h1>
             { this.state.res  && 
               this.state.res.map( mess => 
                 <article key={mess.message}>
                   <div className="inner">
-                    <span className="date">
-                      <span className="day">{ new Date(mess.date).getDate()}<sup>th</sup></span>
-                      <span className="month">{new Date(mess.date).getMonth()}</span>
-                      <span className="year">{new Date(mess.date).getFullYear()}</span>
-                    </span>
                     <h2>{mess.email}</h2> 
                     <p> {mess.message}</p>
                   </div>
